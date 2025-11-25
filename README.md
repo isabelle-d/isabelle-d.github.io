@@ -15,6 +15,8 @@ screenshots. Highlight key screens such as Dashboard, Expense Log, Budgets, Savi
 Circles, and the AI Chatbot. Explain how your team approached UI/UX consistency,
 theming, and user navigation.
 <b>Functionality:</b> A video demonstrating the SpendWise app functionality is below: 
+
+
 <b>Conclusions and Reflections:</b> Building SpendWise was the most hands-on project I’ve completed so far, and it pushed me to grow in both technical skills and teamwork. My main contributions centered around the budgeting feature, where I implemented UI components, integrated ViewModel logic, and separated it from the View classes. This pushed me to learn more about MVVM architecture and the positive effects it has on implementation. One of the biggest challenges was structuring the app so that multiple features—budgets, expenses, savings circles, and the chatbot—could work independently while still being connected, with low coupling and high cohesion. Solving this forced me to think more carefully about responsibilities and how to build classes that scale as a project grows. 
 
 Working with a team also taught me how to communicate better around version control, divide tasks realistically, and review code with a shared standard. On the technical side, I strengthened my understanding of MVVM, lifecycle-aware components, and how to build UI that updates cleanly with the Observer pattern and built in Android Studio functions. I also learned that good architecture matters, not just for a grade, but for keeping a project maintainable as features evolve.
