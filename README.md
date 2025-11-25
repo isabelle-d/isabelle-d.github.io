@@ -7,7 +7,7 @@ The SpendWise app's purpose is to create an easy way for users to manage budgets
 As an Android App our project uses MVVM architecture, seperating data into ViewModels and UI into View Classes. This makes managing the code much easier and improves future scalability. Furthermore, our team implemented various patterns, including Factory, Strategy, Observer, and Decorator. The Factory and Strategy patterns centralized and managed budget and expense periods across the entire app while keeping them easy to edit. The decorator pattern helped manage how chatbot messages would be shown on the user side. And finally, the observer helped with updating the Budget UI when a budget was edited. 
 
 During the development of the project, we used various Agile framework development processes, including use case diagrams, design class diagrams, and sequence diagrams. Below is SpendWise's design class diagram. 
-
+<img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/29cd429c954149ea0fbc308ef89f821af7a33a08/docs/DCD.drawio%20(5).png">
 
 <b>User Interface (UI):  </b> 
 Showcase a guided visual tour of the application using annotated
