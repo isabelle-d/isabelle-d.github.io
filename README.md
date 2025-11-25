@@ -13,24 +13,27 @@ During the development of the project, we used various Agile framework developme
 
 The first step is to <b>login</b>. There is also a create account screen, each with input verification so you can't input invalid fields. The logins are stored in firebase and verify that each user can only log in to their own account. And then there is the <b>Dashboard</b> which centralizes all the information in one place. There is a pie chart,a  line chart, and bar chart that will always show data because of the seeded information. In the top left corner is the user profile and in the top right corner is the calendar, which a user can edit and the entire app will reflect that date. 
 <div class="row">
-<img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(1)-1.png" width = 22%>
-<img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(2)-1.png" width = 22%>
-  <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(9)-1.png"width = 22%>
+ <img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(1)-1.png" width="22%">
+  <img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(2)-1.png" width="22%">
+  <img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(9)-1.png" width="22%">
 </div>
 The core of the app is the <b>Budget and Expense</b> functionality. Each Budget and Expense has a different frequency, which will be reflected in the UI and functionality. Users can create new budgets with customized categories, and then when creating Expenses the categories of the budgets will be reflected. Expenses will also be subtracted from their respective Budgets. The status of the Budget can be gauged by the color of the title, red is incomplete and overbudget, yellow is incomplete and underbudget, and green is complete and underbudget. Users can click on a Budget that has the period of the budget, a calculator for remaining and spent and total amount, daysLeft until the next period, spent, and amount, and a progress bar for the budget period and other basic information. Users can also delete budgets from this page.  
 
 <div class="row">
-   <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(7)-1.png"width = 22%>
-   <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(8)-1.png"width = 22%>
-  <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(4)-1.png"width = 22%>
+  <img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(7)-1.png" width="22%">
+<img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(8)-1.png" width="22%">
+<img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(4)-1.png" width="22%">
+
 </div>
 Then there are the <b>Savings Circle Groups</b>, which are groups users can form with a collaborative goal. Each member can contribute to the goal. Only the leader can delete their group, but anyone can create their own SavingsCircle. Similarly to Budgets and Expenses each savings circle has its own frequency, which is reflected in the period. The leader can invite other users who can accept the invitation and join the group which is updated in sync. 
 <div class="row">
-  <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(6)-1.png"width = 22%>
-  <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(5)-1.png"width = 22%>
+ <img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(6)-1.png" width="22%">
+<img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(5)-1.png" width="22%">
+
 </div>
 Lastly, this is the <b>Chatbot</b> screen. Users can interact with the chatbot, talk to it, ask it questions, and ask for insight into their unique data. In the example below, the chatbot pulls data from Spendwise to tell the user where they have overspent and some ways to fix it. The AI has memory from the current conversation, and the user can pick what chat to import memory from at the beginning of their chat in a pop up.
-   <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(3)-1.png"width = 22%>
+   <img src="https://raw.githubusercontent.com/isabelle-d/isabelle-d.github.io/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(3)-1.png" width="22%">
+
   
 
 <b>Functionality:</b> A video demonstrating the SpendWise app functionality is below: 
