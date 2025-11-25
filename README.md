@@ -9,11 +9,19 @@ As an Android App our project uses MVVM architecture, separating data into ViewM
 During the development of the project, we used various Agile framework development processes, including use case diagrams, design class diagrams, and sequence diagrams. Below is SpendWise's design class diagram. 
 <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/29cd429c954149ea0fbc308ef89f821af7a33a08/docs/DCD.drawio%20(5).png">
 
-<b>User Interface (UI):  </b> 
-Showcase a guided visual tour of the application using annotated
-screenshots. Highlight key screens such as Dashboard, Expense Log, Budgets, Savings
-Circles, and the AI Chatbot. Explain how your team approached UI/UX consistency,
-theming, and user navigation.
+<b>User Interface (UI):  </b> As seen below, our team chose a light colored theme with beige as a secondary color. This theming is consistent throughout all activities. Each title uses bold lettering and a android cardview background. Initally our team each did our own part and then one team member went in and made each section more consistent. This allowed us to work without worrying too much about the UI yet also letting us keep a consistent theme. 
+<div class="row">
+<img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(1)-1.png" width = 22%>
+<img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(2)-1.png" width = 22%>
+<img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(3)-1.png"width = 22%>
+  <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(4)-1.png"width = 22%>
+  <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(5)-1.png"width = 22%>
+  <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(6)-1.png"width = 22%>
+   <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(7)-1.png"width = 22%>
+   <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(8)-1.png"width = 22%>
+   <img src="https://github.com/isabelle-d/isabelle-d.github.io/blob/e62199eb53404583c5d2512bdf388985c20a29dc/images/png2pdf%20(9)-1.png"width = 22%>
+</div>
+
 <b>Functionality:</b> A video demonstrating the SpendWise app functionality is below: 
 
 
