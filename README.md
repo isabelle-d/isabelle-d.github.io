@@ -36,7 +36,8 @@ Lastly, this is the <b>Chatbot</b> screen. Users can interact with the chatbot, 
 
   
 
-<b>Functionality:</b> A video demonstrating the SpendWise app functionality is below: 
+<b>Functionality:</b> A link to a video demonstrating the SpendWise app functionality is below: 
+https://drive.google.com/file/d/1U2i3Yq9gLbf_sRONTwYT6RaSWB_10KMV/view?usp=sharing 
 
 
 <b>Conclusions and Reflections:</b> Building SpendWise was the most hands-on project I’ve completed so far, and it pushed me to grow in both technical skills and teamwork. My main contributions centered around the budgeting feature, where I implemented UI components, integrated ViewModel logic, and separated it from the View classes. This pushed me to learn more about MVVM architecture and the positive effects it has on implementation. One of the biggest challenges was structuring the app so that multiple features—budgets, expenses, savings circles, and the chatbot—could work independently while still being connected, with low coupling and high cohesion. Solving this forced me to think more carefully about responsibilities and how to build classes that scale as a project grows. 
