@@ -52,6 +52,4 @@ Ethan Zhang
 Alexis Andrulonis
 Jayden Bastien 
 Murtaza Naidir
-Acknowledge all team members who contributed to the app's
-development. Specifically, highlight those who were instrumental in the website's
-deployment
+
