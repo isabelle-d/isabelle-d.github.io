@@ -8,3 +8,4 @@ function Credits() {
         </div>
     )
 }
+export default Credits;

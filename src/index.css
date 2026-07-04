@@ -1,6 +1,8 @@
+
 *{
     user-select: none;
 }
+
 /* === Display === */
 .hidden               { display: none; }
 .block                { display: block; }

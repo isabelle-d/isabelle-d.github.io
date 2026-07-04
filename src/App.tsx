@@ -3,18 +3,22 @@ import WindowBar from "./components/WindowBar.tsx";
 import DesktopIcon from "./components/DesktopIcon.tsx";
 import Contact from "./components/Contact.tsx";
 import Projects from "./components/Projects.tsx"
-import { Amovie2, Inetcpl1313, Joy102, Wordpad, Mail, FileText, Shortcut2, Progman24, Mailnews20} from "@react95/icons";
-import { Video } from "@react95/core";
+import { Amovie2,Wordpad, Mail, FileText, Shortcut2, Progman24, Mailnews20} from "@react95/icons";
 import AboutMe from "./components/AboutMe.tsx";
 import Art from "./components/Art.tsx";
 import Resume from "./components/Resume.tsx";
 import Doom from "./components/Doom.tsx";
+import Credits from "./components/Credits.tsx";
 import doomIcon from "./assets/Doom_1.png";
+import './index.css';
+
+import '@react95/core/themes/win95.css';
 
 function App() {
   return (
+
     <div style={{ width: "100%", minHeight: "100vh",position:"relative" }}>
-      <img src="src/assets/screensaver.jpg" style={{width: "100vw", height: "100vh", objectFit: "cover",
+      <img src="/assets/screensaver.jpg" style={{width: "100vw", height: "100vh", objectFit: "cover",
          zIndex: -1, position: "fixed", top: 0,left: 0,}}/>
 
       <div className="fixed">
@@ -39,10 +43,14 @@ function App() {
         <DesktopIcon width={600} icon= {doomIcon} name="Doom">
           <Doom/>
         </DesktopIcon>
+        <DesktopIcon width={600} icon={<Amovie2 variant="32x32_4"/>} name="Credits">
+          <Credits/>
+        </DesktopIcon>
       </div>
       <WindowBar />
 
     </div>
+
   );
 }
 

@@ -1,4 +1,4 @@
-import { Avatar, Checkbox, Fieldset, ProgressBar, Tab, Tabs, Button, Video } from '@react95/core';
+import { Fieldset, Tab, Tabs, Button, Video } from '@react95/core';
 
 
 function Projects(){
@@ -13,7 +13,7 @@ function Projects(){
             <p>This was a semester long team project to create a budgeting and expense management app with a custom chatbot and collaborative features. Git and Github was used for version control and jira was used for project management. Used a sprint planning approach to manage development cycles.</p>
             <p>Our team’s goal was to create an easy way for users to manage budgets and expenses, interact with a custom chatbot, and collaborate through shared savings groups.</p>
             <Button onClick={() => goToLink("https://github.com/isabelle-d/isabelle-d.github.spendwise.io")} style={{backgroundColor: 'lightblue' }}>Repo</Button>
-            <Video src = "src/assets/Sprint 4 demo.mp4" style = {{height: "100%", width:"100%"}}
+            <Video src = "/assets/Sprint 4 demo.mp4" style = {{height: "100%", width:"100%"}}
             videoProps={{controls: true,muted: false, autoPlay: false}}></Video>
             </div>
             </Tab>
@@ -52,7 +52,7 @@ function Projects(){
                          <p style={{ margin: '0', fontSize: '0.85rem', color: 'darkblue' }}>
                             2D pixel art using <b>Aesprite</b>, Integration of UI via Unity, 3D modeling via <b>Magica Voxel</b>
                  </p>
-                    <img src="src/assets/currentCrisis.png" style = {{height: "auto", width:"100%"}}></img>
+                    <img src="/assets/currentCrisis.png" style = {{height: "auto", width:"100%"}}></img>
                     <Button onClick={() => goToLink("https://currentcrisis.net/overview")} style={{backgroundColor: 'lightblue' }}>Website</Button>
                     </Fieldset>
 
@@ -67,7 +67,7 @@ function Projects(){
                      </p>
                     </div>
                     <Fieldset title = "Hypermania">
-                        <img src="src/assets/hypermania.png" style = {{height: "auto", width:"100%"}}></img>
+                        <img src="/assets/hypermania.png" style = {{height: "auto", width:"100%"}}></img>
                         <Button onClick={() => goToLink("https://github.com/raybbian/Hypermania")} style={{backgroundColor: 'lightblue' }}>Repo</Button>
                     </Fieldset>
 
@@ -81,7 +81,7 @@ function Projects(){
                  </p>
                 </div>
                     <Fieldset title = "For / Saken">
-                        <img src="src/assets/For_saken.png" style = {{height: "auto", width:"100%"}}></img>
+                        <img src="/assets/For_saken.png" style = {{height: "auto", width:"100%"}}></img>
                         <Button onClick={() => goToLink("https://github.com/Grace-Shao/Forsaken/tree/main")} style={{backgroundColor: 'lightblue' }}>Repo</Button>
                     </Fieldset>
 
@@ -95,7 +95,7 @@ function Projects(){
                  </p>
                 </div>
                     <Fieldset title = "Back To Bassics">
-                        <img src="src/assets/backTobassics.png" style = {{height: "auto", width:"100%"}}></img>
+                        <img src="/assets/backTobassics.png" style = {{height: "auto", width:"100%"}}></img>
                         <Button onClick={() => goToLink("https://github.com/Maurdeer/Back-to-Bassics")} style={{backgroundColor: 'lightblue' }}>Repo</Button>
                     </Fieldset>
                 </div>
@@ -105,7 +105,7 @@ function Projects(){
             <Fieldset title ="Tournament AI Model (Top 20%)">
                 <h3>Tournament AI Model (Top 20%)</h3>
                 <p>Used ML model for a ai tournament. Started with a min max algorithm with alpha beta pruning and added elements of monte carlo tree search. </p>
-                <img src="src/assets/aitournament.png" style = {{height: "auto", width:"100%"}}></img>
+                <img src="/assets/aitournament.png" style = {{height: "auto", width:"100%"}}></img>
                 <p style={{ margin: '0', fontSize: '0.85rem', color: 'darkblue' }}>
                     ML Algorithms, Python, Pytorch, Neural Nets, Bayesian Prediction
                  </p>

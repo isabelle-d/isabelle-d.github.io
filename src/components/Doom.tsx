@@ -22,17 +22,13 @@ export default function Doom() {
     };
   }, []);
 
-  const makeFullscreen = () => {
-    dosInstance.current?.requestFullscreen();
-  };
-
   return (
     <div>
     <div style={{ display: 'flex', flexDirection: 'row',gap: '20px',alignItems: 'flex-start'}}>
     <div style={{ width: '640px', height: '400px', border: '2px solid red' }}>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
     </div>
-    <img src="src/assets/controls.png" alt="Controls" style={{ width: '350px', height: 'auto' }} />
+    <img src="/assets/controls.png" alt="Controls" style={{ width: '350px', height: 'auto' }} />
     </div>
     <p style = {{color: "black"}}> You can resize the window to fit your screen! (And Use ESC to catch mouse movement)</p>
     </div>

@@ -2,13 +2,11 @@ import { List, TaskBar } from "@react95/core";
 import {
   Computer3,
   Settings,
-  Amovie2,
-  Joy102,
   Inetcpl1313,
   Wordpad,
   Mail
 } from "@react95/icons";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Shutdown from "./Shutdown";
 import { useWindowsStore } from "../store/windows";

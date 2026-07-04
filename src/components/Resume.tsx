@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { createRoot } from 'react-dom/client';
 
 function Resume() {
   return (
 
-  <object data="src/assets/Resume.pdf" type="application/pdf" width="100%" height="100%">
+  <object data="/assets/Resume.pdf" type="application/pdf" width="100%" height="100%">
       <p>This browser doesn't support PDF Viewing :( </p>
   </object>
 
