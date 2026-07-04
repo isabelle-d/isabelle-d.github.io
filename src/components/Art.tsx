@@ -8,9 +8,9 @@ function Art(){
                 <Fieldset title = "Sprites"
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr",gap: "10px"}}>
                 <img src="/assets/art/Sprite1.PNG" style = {{height: "auto", width: "80%"}}></img>
-                <img src="/assets/art/Sprite2.PNG" style = {{height: "auto", width: "80%"}}></img>
+                <img src="/assets/art/sprite2.PNG" style = {{height: "auto", width: "80%"}}></img>
                 <img src="/assets/art/forsakenmenu.PNG" style = {{height: "auto", width: "80%"}}></img>
-                <img src="/assets/art/hypermaniamenu.PNG" style = {{height: "auto", width: "80%"}}></img>
+                <img src="/assets/art/hypermaniaMenu.PNG" style = {{height: "auto", width: "80%"}}></img>
 
                 </Fieldset>
              </Frame>
@@ -23,11 +23,11 @@ function Art(){
             <img src="/assets/art/Art1.JPG" style = {{height: "auto", width: "80%"}}></img>
             <img src="/assets/art/art3.PNG" style = {{height: "auto", width: "80%"}}></img>
             <img src="/assets/art/Art4.PNG" style = {{height: "auto", width: "80%"}}></img>
-            <img src="/assets/art/art5.png" style = {{height: "auto", width: "80%"}}></img>
-            <img src="/assets/art/art6.jpg" style = {{height: "auto", width: "80%"}}></img>
-            <img src="/assets/art/art7.png" style = {{height: "auto", width: "80%"}}></img>
-            <img src="/assets/art/art8.png" style = {{height: "auto", width: "80%"}}></img>
-            <img src="/assets/art/art9.png" style = {{height: "auto", width: "80%"}}></img>
+            <img src="/assets/art/art5.PNG" style = {{height: "auto", width: "80%"}}></img>
+            <img src="/assets/art/Art6.jpg" style = {{height: "auto", width: "80%"}}></img>
+            <img src="/assets/art/art7.PNG" style = {{height: "auto", width: "80%"}}></img>
+            <img src="/assets/art/art8.PNG" style = {{height: "auto", width: "80%"}}></img>
+            <img src="/assets/art/art9.PNG" style = {{height: "auto", width: "80%"}}></img>
             </div>
             </Frame>
             </Tab>

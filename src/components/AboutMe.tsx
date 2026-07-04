@@ -9,7 +9,7 @@ function AboutMe() {
         <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
         <Avatar src="public/assets/profile.png" alt="Creator" size="140px" />
         <Avatar src="public/assets/art/LionMe.JPG" alt="Creator" size="140px" />
-        <Avatar src="public/assets/art/ChinaMe.JPG" alt="Creator" size="140px" />
+        <Avatar src="public/assets/art/chinaMe.JPG" alt="Creator" size="140px" />
         </div>
 
         <p>A Georgia Tech Computer Science Undergrad Student with threads in Cybersecurity and InfoInternetworks</p>
