@@ -9,7 +9,7 @@ function Art(){
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr",gap: "10px"}}>
                 <img src="assets/art/Sprite1.PNG" style = {{height: "auto", width: "80%"}}></img>
                 <img src="assets/art/sprite2.PNG" style = {{height: "auto", width: "80%"}}></img>
-                <img src="assets/art/forsakenmenu.PNG" style = {{height: "auto", width: "80%"}}></img>
+                <img src="assets/art/forsakenMenu.PNG" style = {{height: "auto", width: "80%"}}></img>
                 <img src="assets/art/hypermaniaMenu.PNG" style = {{height: "auto", width: "80%"}}></img>
 
                 </Fieldset>
