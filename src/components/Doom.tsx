@@ -24,7 +24,7 @@ export default function Doom() {
 
   return (
     <div>
-    <div style={{ display: 'flex', flexDirection: 'row',gap: '20px',alignItems: 'flex-start'}}>
+    <div style={{ display: 'flex', flexDirection: 'row',gap: '20px',alignItems: 'flex-start', }}>
     <div style={{ width: '640px', height: '400px', border: '2px solid red' }}>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
     </div>
