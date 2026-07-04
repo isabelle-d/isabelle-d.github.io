@@ -3,7 +3,7 @@ import WindowBar from "./components/WindowBar.tsx";
 import DesktopIcon from "./components/DesktopIcon.tsx";
 import Contact from "./components/Contact.tsx";
 import Projects from "./components/Projects.tsx"
-import { Amovie2,Wordpad, Mail, FileText, Shortcut2, Progman24, Mailnews20} from "@react95/icons";
+import { Amovie2,Wordpad, Mail, FileText, Progman24, Mailnews20} from "@react95/icons";
 import AboutMe from "./components/AboutMe.tsx";
 import Art from "./components/Art.tsx";
 import Resume from "./components/Resume.tsx";
@@ -30,9 +30,6 @@ function App() {
         </DesktopIcon>
         <DesktopIcon width={600} icon={<FileText variant="32x32_4"/>} name="Projects">
           <Projects/>
-        </DesktopIcon>
-        <DesktopIcon width={400} icon={<Shortcut2 variant="32x32_4"/>} name="Swap Website">
-          <Art/>
         </DesktopIcon>
         <DesktopIcon width={500} icon={<Progman24 variant="32x32_4"/>} name="Art Gallery">
           <Art/>
@@ -62,4 +59,6 @@ export default App;
 3. Contact visibility
 5.Bad Apple
 6.More art
+- fieldset resize stuff
+-swap website
 */

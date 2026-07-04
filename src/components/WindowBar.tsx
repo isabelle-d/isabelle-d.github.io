@@ -2,9 +2,9 @@ import { List, TaskBar } from "@react95/core";
 import {
   Computer3,
   Settings,
-  Inetcpl1313,
   Wordpad,
-  Mail
+  Mail,
+  Shortcut2
 } from "@react95/icons";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -52,10 +52,10 @@ function WindowBar() {
               Settings
             </List.Item>
             <List.Item
-              onClick={() => openWindow("Browser")}
-              icon={<Inetcpl1313 variant="32x32_4" />}
+              onClick={() => window.open("https://isabelle-d.github.io/Readable-Website/", "_blank")}
+              icon={<Shortcut2 variant="32x32_4" />}
             >
-              Browser
+              Swap Website
             </List.Item>
             <List.Item
               onClick={() => openWindow("Resume")}
