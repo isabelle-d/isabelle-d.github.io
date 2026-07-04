@@ -1,4 +1,8 @@
 import {  Fieldset,  Tab, Tabs,  Frame } from '@react95/core';
+// @ts-ignore
+import Sprite1 from '/assets/art/Spite1.PNG';
+// @ts-ignore
+import Sprite2 from '/assets/art/Spite1.PNG';
 function Art(){
     return(
         <Tabs defaultActiveTab="Personal">
@@ -6,8 +10,8 @@ function Art(){
                 <Frame title = "Sprites">
                 <Fieldset title = "Sprites"
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr",gap: "10px"}}>
-                <img src="/assets/art/Spite1.PNG" style = {{height: "auto", width: "80%"}}></img>
-                <img src="/assets/art/Sprite2.PNG" style = {{height: "auto", width: "80%"}}></img>
+                <img src={Sprite1} style = {{height: "auto", width: "80%"}}></img>
+                <img src={Sprite2} style = {{height: "auto", width: "80%"}}></img>
                 <img src="/assets/art/forsakenmenu.PNG" style = {{height: "auto", width: "80%"}}></img>
                 <img src="/assets/art/hypermaniamenu.PNG" style = {{height: "auto", width: "80%"}}></img>
 
