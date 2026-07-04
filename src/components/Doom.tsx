@@ -5,7 +5,6 @@ export default function Doom() {
   const containerRef = useRef<HTMLDivElement>(null);
   const dosInstance = useRef<any>(null);
 
-  // This hook handles loading/unloading the scripts and CSS
   const isReady = useJsDos();
 
   useEffect(() => {
@@ -26,9 +25,7 @@ export default function Doom() {
     };
   }, [isReady]);
 
-  const makeFullscreen = () => {
-    dosInstance.current?.requestFullscreen();
-  };
+
 
   return (
     <div>
@@ -36,7 +33,7 @@ export default function Doom() {
         <div style={{ width: '640px', height: '400px', border: '2px solid red' }}>
           <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
         </div>
-        <img src="src/assets/controls.png"alt="Controls"style={{ width: '350px', height: 'auto' }}
+        <img src="/assets/controls.png"alt="Controls"style={{ width: '350px', height: 'auto' }}
         />
       </div>
 
@@ -44,8 +41,6 @@ export default function Doom() {
         You can resize the window to fit your screen! (And Use ESC to catch mouse movement)
       </p>
 
-      {/* You can add a button if you want to trigger your fullscreen function */}
-      <button onClick={makeFullscreen}>Go Fullscreen</button>
     </div>
   );
 }

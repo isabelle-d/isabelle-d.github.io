@@ -1,8 +1,7 @@
-import React, { type ReactElement, type ReactNode, type ComponentType } from "react";
+import React, { type ReactElement, type ReactNode, type ComponentType, useMemo } from "react";
 import { Modal, TitleBar, useModal } from "@react95/core";
 import { useWindowsStore } from "../store/windows";
 
-// Centralized style objects for maintainability and clarity
 const styles = {
   desktopIcon: {
     alignItems: "center",
@@ -94,6 +93,9 @@ export const Window = ({ title, onClose, children, icon, width, height }: Window
   const w = width ? `${width}px` : "100vw";
   const h = height ? `${height}px` : "70vh";
 
+  const jitterX = useMemo(() => Math.floor(Math.random() * 80) - 40, []);
+  const jitterY = useMemo(() => Math.floor(Math.random() * 80) - 40, []);
+
   const iconNode = typeof icon === 'string'
     ? <img src={icon} alt={title} width={16} height={16} />
     : icon;
@@ -107,9 +109,13 @@ export const Window = ({ title, onClose, children, icon, width, height }: Window
       dragOptions={{ bounds: "body" }}
       style={{
         width: w,
-        height: h, top: `calc(50vh - (${h} / 2))`,left: `calc(50vw - (${w} / 2))`,
+        height: h,
+        top: `calc(50vh - (${h} / 2) + ${jitterY}px)`,
+        left: `calc(50vw - (${w} / 2) + ${jitterX}px)`,
         flexDirection: "column",
-        resize: "both",overflow: "hidden",}}
+        resize: "both",
+        overflow: "hidden",
+      }}
       titleBarOptions={[
         <TitleBar.Minimize
           style={{ marginBlock: "auto" }}

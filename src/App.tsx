@@ -60,7 +60,6 @@ export default App;
 /*Things to fix
 2.Shutdown menu/start up menu?
 3. Contact visibility
-4.Doom
 5.Bad Apple
 6.More art
 */
