@@ -13,8 +13,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install
-      - run: npm run build
+      
+      # REPLACE THE OLD INSTALL/BUILD STEPS WITH THESE:
+      - name: Install and Build
+        run: |
+          npm cache clean --force
+          rm -rf node_modules package-lock.json
+          npm install
+          npm run build
       
       # This is the official action that sets the correct MIME types
       - name: Upload Pages artifact
