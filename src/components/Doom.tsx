@@ -1,18 +1,22 @@
 import { useEffect, useRef } from 'react';
+import { useJsDos } from '../hooks/useJsDos';
 
 export default function Doom() {
   const containerRef = useRef<HTMLDivElement>(null);
   const dosInstance = useRef<any>(null);
 
-  useEffect(() => {
-    // 1. Get the Dos library
-    const Dos = (window as any).Dos;
-    if (!Dos || !containerRef.current) return;
+  // This hook handles loading/unloading the scripts and CSS
+  const isReady = useJsDos();
 
-    // 2. Initialize with the options object instead of .run()
+  useEffect(() => {
+
+    if (!isReady || !containerRef.current) return;
+
+    const Dos = (window as any).Dos;
+
     dosInstance.current = Dos(containerRef.current, {
-      url: "https://v8.js-dos.com/bundles/doom.jsdos", // Use a .jsdos bundle
-      autoStart: true, // This replaces the need to call .run()
+      url: "https://v8.js-dos.com/bundles/doom.jsdos",
+      autoStart: true,
     });
 
     return () => {
@@ -20,18 +24,28 @@ export default function Doom() {
         dosInstance.current.stop();
       }
     };
-  }, []);
+  }, [isReady]);
+
+  const makeFullscreen = () => {
+    dosInstance.current?.requestFullscreen();
+  };
 
   return (
     <div>
-    <div style={{ display: 'flex', flexDirection: 'row',gap: '20px',alignItems: 'flex-start', }}>
-    <div style={{ width: '640px', height: '400px', border: '2px solid red' }}>
-      <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
-    </div>
-    <img src="/assets/controls.png" alt="Controls" style={{ width: '350px', height: 'auto' }} />
-    </div>
-    <p style = {{color: "black"}}> You can resize the window to fit your screen! (And Use ESC to catch mouse movement)</p>
-    </div>
+      <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', alignItems: 'flex-start' }}>
+        <div style={{ width: '640px', height: '400px', border: '2px solid red' }}>
+          <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
+        </div>
+        <img src="src/assets/controls.png"alt="Controls"style={{ width: '350px', height: 'auto' }}
+        />
+      </div>
 
+      <p style={{ color: "black" }}>
+        You can resize the window to fit your screen! (And Use ESC to catch mouse movement)
+      </p>
+
+      {/* You can add a button if you want to trigger your fullscreen function */}
+      <button onClick={makeFullscreen}>Go Fullscreen</button>
+    </div>
   );
 }
