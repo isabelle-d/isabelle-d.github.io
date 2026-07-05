@@ -11,7 +11,7 @@ import Doom from "./components/Doom.tsx";
 import Credits from "./components/Credits.tsx";
 import doomIcon from "./assets/Doom_1.png";
 import './index.css';
-import { Button } from "@react95/core";
+
 
 import '@react95/core/themes/win95.css';
 

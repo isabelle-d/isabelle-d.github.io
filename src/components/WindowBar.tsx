@@ -1,4 +1,4 @@
-import { List, TaskBar, Button } from "@react95/core";
+import { List, TaskBar } from "@react95/core";
 import {
   Computer3,
   Settings,
