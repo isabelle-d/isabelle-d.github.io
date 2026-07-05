@@ -3,7 +3,7 @@ import WindowBar from "./components/WindowBar.tsx";
 import DesktopIcon from "./components/DesktopIcon.tsx";
 import Contact from "./components/Contact.tsx";
 import Projects from "./components/Projects.tsx"
-import { Amovie2,Wordpad, Mail, FileText, Progman24, Mailnews20} from "@react95/icons";
+import { Amovie2,Wordpad, Mail, FileText, Progman24, Mailnews20, Shortcut2} from "@react95/icons";
 import AboutMe from "./components/AboutMe.tsx";
 import Art from "./components/Art.tsx";
 import Resume from "./components/Resume.tsx";
@@ -11,6 +11,7 @@ import Doom from "./components/Doom.tsx";
 import Credits from "./components/Credits.tsx";
 import doomIcon from "./assets/Doom_1.png";
 import './index.css';
+import { Button } from "@react95/core";
 
 import '@react95/core/themes/win95.css';
 
@@ -43,10 +44,20 @@ function App() {
         <DesktopIcon width={600} icon={<Amovie2 variant="32x32_4"/>} name="Credits">
           <Credits/>
         </DesktopIcon>
+        <div
+          onClick={() => window.open("https://isabelle-d.github.io/Readable-Website/", "_blank")}
+          style={{
+            display: 'flex',flexDirection: 'column',alignItems: 'center',
+            cursor: 'pointer',width: '135px',textAlign: 'center'
+          }}>
+          <Shortcut2 variant="32x32_4" />
+          <span style={{ color: 'white', marginTop: '4px' }}>Website</span>
+        </div>
       </div>
       <WindowBar />
 
     </div>
+
 
   );
 }
