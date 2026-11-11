@@ -39,8 +39,7 @@ const SIDE_FLIP_BACK = 0.55;
 const SIDE_TONE_NORMAL: 'light' | 'dark' = 'light';
 const SIDE_TONE_HEAVY: 'light' | 'dark' = 'dark';
 
-// false = the Bad Apple window stays minimized in the taskbar after the big apple ends.
-const RESTORE_SELF_AFTER = false;
+
 
 const CELLS = GRID_W * GRID_H;
 const FRAME_BYTES = Math.ceil(CELLS / 8);
