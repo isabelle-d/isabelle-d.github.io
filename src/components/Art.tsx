@@ -7,8 +7,13 @@ function Art(){
                 <Frame title = "Sprites">
                 <Fieldset title = "Sprites"
                 style={{ display: "grid", gridTemplateColumns: "1fr 1fr",gap: "10px"}}>
+                <img src = "src/assets/art/game assets/merksMenu.webp" style = {{height: "auto", width: "80%"}}></img>
+                <img src = "src/assets/art/game assets/merks.png" style = {{height: "auto", width: "80%"}}></img>
+                <img src = "src/assets/art/game assets/pixelCards.png" style = {{height: "auto", width: "80%"}}></img>
+                <img src = "src/assets/art/game assets/shop.png" style = {{height: "auto", width: "80%"}}></img>
                 <img src="assets/art/Sprite1.PNG" style = {{height: "auto", width: "80%"}}></img>
                 <img src="assets/art/sprite2.PNG" style = {{height: "auto", width: "80%"}}></img>
+                <img src = "src/assets/art/game assets/pixelChurch.png" style = {{height: "auto", width: "80%"}}></img>
                 <img src="assets/art/for.PNG" style = {{height: "auto", width: "80%"}}></img>
                 <img src="assets/art/hypermaniaMenu.PNG" style = {{height: "auto", width: "80%"}}></img>
                 <img src = "assets/art/healthbar.png" style = {{height: "auto", width: "80%"}}></img>

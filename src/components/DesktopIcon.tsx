@@ -1,4 +1,11 @@
-import React, { type ReactElement, type ReactNode, type ComponentType, useMemo } from "react";
+import React, {
+  type CSSProperties,
+  type ReactElement,
+  type ReactNode,
+  type ComponentType,
+  useEffect,
+  useMemo,
+} from "react";
 import { Modal, TitleBar, useModal } from "@react95/core";
 import { useWindowsStore } from "../store/windows";
 
@@ -26,56 +33,13 @@ const styles = {
     textShadow: "1px 1px 3px rgba(0, 0, 0, 0.7)",
     userSelect: "none" as const,
   },
-  window: {
-    background: "#ffffff",
-    borderRadius: "8px",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-    display: "flex",
-    flexDirection: "column",
-  },
-  titleBar: {
-    alignItems: "center",
-    background: "#f0f0f0",
-    borderTopLeftRadius: "8px",
-    borderTopRightRadius: "8px",
-    cursor: "move",
-    display: "flex",
-    fontWeight: "bold",
-    justifyContent: "space-between",
-    padding: "8px",
-  },
-  closeButton: {
-    alignItems: "center",
-    background: "#ff5f56",
-    border: "1px solid #e04440",
-    borderRadius: "50%",
-    color: "#9a0000",
-    cursor: "pointer",
-    display: "flex",
-    fontSize: "10px",
-    height: "15px",
-    justifyContent: "center",
-    lineHeight: "10px",
-    width: "15px",
-  },
-  windowContent: {
-    flex: "1",
-    overflow: "auto",
-    padding: "20px",
-  },
-  modalCenteringWrapper: {
-    position: "fixed" as const,
-    top: "45%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    zIndex: 9999,
-  },
   resizableContainer: {
     overflow: "auto" as const,
     minWidth: "300px",
-    minHeight: "200px",
+    minHeight: 0,
+    flex: 1,
     width: "100%",
-    height: "100%",
+    boxSizing: "border-box" as const,
   },
 } as const;
 
@@ -90,15 +54,38 @@ interface WindowProps {
 
 export const Window = ({ title, onClose, children, icon, width, height }: WindowProps) => {
   const { minimize } = useModal();
-  const w = width ? `${width}px` : "100vw";
-  const h = height ? `${height}px` : "70vh";
+
+  // Sizes are capped to the viewport so big windows never run off-screen.
+  // Windows are at least 55% of the screen wide and 65% tall, or the size
+  // passed from App.tsx if that is larger, and never bigger than 94vw / 85vh.
+  const w = `min(max(${width ?? 800}px, 55vw), 94vw)`;
+  const h = `min(max(${height ?? 600}px, 65vh), 85vh)`;
 
   const jitterX = useMemo(() => Math.floor(Math.random() * 80) - 40, []);
   const jitterY = useMemo(() => Math.floor(Math.random() * 80) - 40, []);
 
-  const iconNode = typeof icon === 'string'
-    ? <img src={icon} alt={title} width={16} height={16} />
-    : icon;
+  const iconNode = useMemo(
+    () =>
+      typeof icon === "string" ? (
+        <img src={icon} alt={title} width={16} height={16} />
+      ) : (
+        icon
+      ),
+    [icon, title]
+  );
+
+  const modalStyle = useMemo(
+    () => ({
+      width: w,
+      height: h,
+      top: `calc(50vh - (${h} / 2) + ${jitterY}px)`,
+      left: `calc(50vw - (${w} / 2) + ${jitterX}px)`,
+      flexDirection: "column" as const,
+      resize: "both" as const,
+      overflow: "hidden" as const,
+    }),
+    [w, h, jitterX, jitterY]
+  );
 
   return (
     <SafeModal
@@ -107,19 +94,11 @@ export const Window = ({ title, onClose, children, icon, width, height }: Window
       title={title}
       bounds="body"
       dragOptions={{ bounds: "body" }}
-      style={{
-        width: w,
-        height: h,
-        top: `calc(50vh - (${h} / 2) + ${jitterY}px)`,
-        left: `calc(50vw - (${w} / 2) + ${jitterX}px)`,
-        flexDirection: "column",
-        resize: "both",
-        overflow: "hidden",
-      }}
+      style={modalStyle}
       titleBarOptions={[
         <TitleBar.Minimize
           style={{ marginBlock: "auto" }}
-          key="maximize"
+          key="minimize"
           onClick={() => minimize(title)}
         />,
         <TitleBar.Close
@@ -136,11 +115,10 @@ export const Window = ({ title, onClose, children, icon, width, height }: Window
           display: "flex",
           flexDirection: "column",
           flex: 1,
+          minHeight: 0,
         }}
       >
-        <div style={styles.resizableContainer}>
-          {children}
-        </div>
+        <div style={styles.resizableContainer}>{children}</div>
       </Modal.Content>
     </SafeModal>
   );
@@ -152,6 +130,9 @@ interface DesktopIconProps {
   children: ReactNode;
   width?: number;
   height?: number;
+  openOnLoad?: boolean;
+  style?: CSSProperties;
+  columnBreakBefore?: boolean;
 }
 
 const DesktopIcon = ({
@@ -160,18 +141,26 @@ const DesktopIcon = ({
   children,
   width,
   height,
+  openOnLoad = false,
+  style,
+  columnBreakBefore = false,
 }: DesktopIconProps) => {
   const { openWindow, closeWindow, isWindowOpen } = useWindowsStore();
   const isOpen = isWindowOpen(name);
-  const {restore} = useModal();
+  const { restore } = useModal();
+
+  useEffect(() => {
+    if (openOnLoad && !isWindowOpen(name)) openWindow(name);
+    // Run once on mount only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleClick = () => {
-    if(!isOpen){
+    if (!isOpen) {
       openWindow(name);
-    } else{
+    } else {
       restore(name);
     }
-
   };
 
   const handleCloseWindow = () => {
@@ -180,7 +169,10 @@ const DesktopIcon = ({
 
   return (
     <>
-      <div style={styles.desktopIcon} onClick={handleClick}>
+      {columnBreakBefore && (
+        <div style={{ flexBasis: "100%", width: 0, height: 0 }} />
+      )}
+      <div style={{ ...styles.desktopIcon, ...style }} onClick={handleClick}>
         {typeof icon === "string" ? (
           <img src={icon} alt={name} style={styles.iconImage} />
         ) : (

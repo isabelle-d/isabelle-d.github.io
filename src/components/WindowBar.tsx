@@ -23,8 +23,6 @@ function Clock() {
     <div style={{ padding: "0 10px", alignSelf: "center" }}>
       {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
     </div>
-
-
   );
 }
 
@@ -60,7 +58,7 @@ function WindowBar() {
               Swap Website
             </List.Item>
             <List.Item
-              onClick={() => openWindow("Resume")}
+              onClick={() => openWindow("About Me")}
               icon={<Wordpad variant="32x32_4" />}
             >
               About Me
@@ -72,7 +70,6 @@ function WindowBar() {
             >
               Shut Down...
             </List.Item>
-
           </List>
         }
       >
