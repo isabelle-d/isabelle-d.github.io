@@ -267,7 +267,7 @@ function Projects() {
                 <p style={{ margin: '0', fontSize: '0.85rem', color: 'darkblue' }}>
                     AI, React, SQLite, JavaScript, HTML
                 </p>
-                <img src="src/assets/equityvoice.png" style={{ height: "auto", width: "100%" }}></img>
+                <img src="assets/equityvoice.png" style={{ height: "auto", width: "100%" }}></img>
 
                 <Button onClick={() => goToLink("https://equityvoice-2-0.vercel.app/")} style={{ backgroundColor: 'lightblue' }}>Website</Button>
                 <Button onClick={() => goToLink("https://github.com/Rainameow/equityvoice-2.0")} style={{ backgroundColor: 'lightblue' }}>Repo</Button>
@@ -300,7 +300,7 @@ function Projects() {
                         building a fully fledged game over a single <b>~15 week</b> semester.</>}
                     skills="Art lead, 2D pixel art, team of 40+"
                     links={[{ label: 'Repo', url: 'https://github.com/ncaz/Merks-at-Werk' }]}
-                    image="src/assets/art/game assets/merks.png"
+                    image="assets/art/game assets/merks.png"
                 />
 
                 <GameCard
